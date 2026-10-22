@@ -5,12 +5,7 @@
 </head>
 <body>
     <h1>Student Registration</h1>
-
-    {% with messages = get_flashed_messages() %}
-        {% for message in messages %}
-            <p>{{ message }}</p>
-        {% endfor %}
-    {% endwith %}
+    <p>Register a new student for course enrollment.</p>
 
     <form method="POST">
         <label>Student Name:</label>
