@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Course Registration</title>
+</head>
+<body>
+    <h1>Online Student Course Registration System</h1>
+    <p>Welcome to the online course registration portal.</p>
+
+    {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endwith %}
+
+    <h2>Available Courses</h2>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="{{ url_for('register') }}">Student Registration</a></p>
+    <p><a href="{{ url_for('enroll') }}">Course Enrollment</a></p>
+    <p><a href="{{ url_for('view_enrollments') }}">View Enrollments</a></p>
+</body>
+</html>
